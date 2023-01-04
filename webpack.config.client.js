@@ -1,5 +1,4 @@
 const path = require('path')
-const HTMLWebpackPlugin = require('html-webpack-plugin');
 const dotenv = require('dotenv')
 
 dotenv.config()
@@ -51,9 +50,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new HTMLWebpackPlugin({
-      template: './src/public/index.html',
-    })
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
