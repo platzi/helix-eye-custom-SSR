@@ -8,10 +8,10 @@
   "scripts": {
     "build-client": "webpack --config webpack.config.client.js",
     "build-server": "webpack --config webpack.config.server.js",
-    "build": "NODE_ENV=production npm run build-client && npm run build-server",
+    "build": "NODE_ENV=development npm run build-client && npm run build-server",
     "build-dev": "NODE_ENV=development npm run build-server && node --inspect dist/index.js",
     "dev": "nodemon --ext ts --exec \"npm run build-dev\"",
-    "start": "NODE_ENV=production npm run build && NODE_ENV=production node dist/index.js"
+    "start": "NODE_ENV=development npm run build && NODE_ENV=development node dist/index.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",

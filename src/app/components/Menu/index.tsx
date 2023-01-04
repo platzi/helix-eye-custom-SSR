@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { MenuButton, MenuContainer } from "./styles"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom';
 
 export const Menu = () => {
 
@@ -22,14 +21,14 @@ export const Menu = () => {
         </button>
         <ul>
           <li>
-            <Link to="/" onClick={closeMenu}>
+            <a href="/" onClick={closeMenu}>
               Home
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="/galaxias" onClick={closeMenu}>
+            <a href="/galaxias" onClick={closeMenu}>
               Galaxias
-            </Link>
+            </a>
           </li>
         </ul>
       </MenuContainer>
