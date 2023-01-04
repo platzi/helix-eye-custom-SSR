@@ -6,9 +6,9 @@
   "author": "edevars <e.devars.dev@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_ENV=development webpack serve",
-    "build": "NODE_ENV=production webpack",
-    "start": "NODE_ENV=production yarn run build && node server.js"
+    "build-server": "webpack --config webpack.config.server.js",
+    "build-dev": "NODE_ENV=development npm run build-server && node --inspect dist/index.js",
+    "dev": "nodemon --ext ts --exec \"npm run build-dev\""
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
@@ -30,9 +30,11 @@
     "eslint-plugin-react": "^7.31.11",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "nodemon": "^2.0.20",
     "swc-loader": "^0.2.3",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
+    "webpack-dev-server": "^4.11.1",
+    "webpack-node-externals": "^3.0.0"
   }
 }
