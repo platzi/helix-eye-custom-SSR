@@ -7,7 +7,7 @@ const LOGO_IMAGE_WIDE = "https://i.imgur.com/7D6PLq3.png"
 export const Hero = () => {
   return (
     <StyledHero>
-      <h1>helix eye</h1>
+      <h1>helix </h1>
       <picture>
         <source srcSet={LOGO_IMAGE_WIDE} media="(min-width: 600px)"/>
         <img src={LOGO_IMAGE} alt="helix eye" />
